@@ -1,0 +1,858 @@
+{
+	"info": {
+		"_postman_id": "35383fa1-8a70-4be3-96cc-19b9e0cf9bfc",
+		"name": "Lumen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"item": [
+				{
+					"name": "All authors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"authors"
+							]
+						},
+						"description": "Muestra todos los authores"
+					},
+					"response": []
+				},
+				{
+					"name": "Save Author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "harold",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "mamam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "harold",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "mamam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/authors/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"authors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "henry",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "das",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/authors/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"authors",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/authors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Holi",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lalala",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "234",
+									"type": "text"
+								},
+								{
+									"key": "author_id",
+									"value": "34",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8001/books",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/books/151",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"books",
+								"151"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "cambiolelel",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lalala",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "234",
+									"type": "text"
+								},
+								{
+									"key": "author_id",
+									"value": "535",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8001/books/151",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"books",
+								"151"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/books/151",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"books",
+								"151"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApiWateway",
+			"item": [
+				{
+					"name": "Authors",
+					"item": [
+						{
+							"name": "All Authors (gateway)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImViZGFlMTFlNDU3M2Q5OGVhYzk1ZWQyODlhNmI4ZGU0NzY4MTNiMTk2OGZhZjIyNjQ4NjYwNWM4OWM0NTM1MTU4M2FiMmU4OTE1YmFiMmQ1In0.eyJhdWQiOiIzIiwianRpIjoiZWJkYWUxMWU0NTczZDk4ZWFjOTVlZDI4OWE2YjhkZTQ3NjgxM2IxOTY4ZmFmMjI2NDg2NjA1Yzg5YzQ1MzUxNTgzYWIyZTg5MTViYWIyZDUiLCJpYXQiOjE2Mzc5NjAyMTAsIm5iZiI6MTYzNzk2MDIxMCwiZXhwIjoxNjY5NDk2MjEwLCJzdWIiOiIiLCJzY29wZXMiOltdfQ.FWGt-uiKaFxukUPDVQ_DpTguMUNZ6Ag5YqhMIP3IIJ4RVtxgs-7jVoMWaFG1nkS4hJxM2i9WAEk9EEDob3IyhFjOcfJto7p74UJvOxCwxLYggFBiBSh8_Rv1O2omgMTgZsKbSmL3XP20RE_T-9-7s-rIW02q1jTcNGNRVIofZ8K8OJr7sjxxyJ_fxA-2rBncviw_nm-jYFYpWHcrTJJkZbF93q1M6sXREwNc-x7ZIPDsQCx1spSVlsYfMhpfhv9yEFZm0T6I2zTIyHKyQwP3kVp07HDWEbJ2gEdKV86MVs8hL-i7cnYXkBf987X9pq1geluiEONMtgxsdxMpilReBGytGcwrTbnze33wxcULwIBcOVRRsCmkRVxaJuoMgnA03Bt2XzR_C-ITPp_igzw8tYLqNZBFXhTkObl__3LuWt1gavC-ZQhAHlxxQqtHjFKR7QJNYqzD--pgyUd76ch7gUsNSez-Vk5VIWZ39HGCeIAu9JEutYKjSB-ptR5_IRE6TWcltz3smOY4YOpCXK_-KzmzUmBcWtfCvja38dEvS-gyyC3LNJVgv5eai3Gn9WWonjrf2tl_pHHMR0F0QxXFMiL9CN87HfQimWZctLsM5-fwv2avc1vdrf9cHpQNvZOBRbQdIK_Bbp6pH7YuQjNddmBTTm7BD12NKvNqCjMBLRI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8002/authors",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Author (gateway)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "so",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "vr",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8002/authors",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"authors"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "yonson",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"disabled": true
+										},
+										{
+											"key": "country",
+											"value": "usa",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Author by ID (gateway)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/authors/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"authors",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update an Author (gateway)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "fal",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8002/authors/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"authors",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Author (gateway)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8002/authors/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"authors",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Books",
+					"item": [
+						{
+							"name": "All books (gateway)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/books",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Book (gateway)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Holi",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "lalala",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "234",
+											"type": "text"
+										},
+										{
+											"key": "author_id",
+											"value": "34",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8002/books",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get book by ID (gateway)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/books/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"books",
+										"15"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Book (gateway)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "cambiolelel",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "lalalaff",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "2343",
+											"type": "text"
+										},
+										{
+											"key": "author_id",
+											"value": "535",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8002/books/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"books",
+										"15"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Book (gateway)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8002/books/15",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"books",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Save User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQyZDg1N2ExZTRkYTJkNWQ1ZjczNWIzODk3NWMwNDk4YjMyZDk1NjdkODAxMTI0YWMxMTNkMzdjMTZjZTQ4MDlhMzM5MWRjY2Q4MjI5OWVmIn0.eyJhdWQiOiIyIiwianRpIjoiNDJkODU3YTFlNGRhMmQ1ZDVmNzM1YjM4OTc1YzA0OThiMzJkOTU2N2Q4MDExMjRhYzExM2QzN2MxNmNlNDgwOWEzMzkxZGNjZDgyMjk5ZWYiLCJpYXQiOjE2MzgyMzM4NDgsIm5iZiI6MTYzODIzMzg0OCwiZXhwIjoxNjY5NzY5ODQ4LCJzdWIiOiIiLCJzY29wZXMiOlsiKiJdfQ.OiLvC9YnNcs6mzoj41Cd94u4U_-NC-igYjMQn_vdLgUI6N51hHLIv5s3Sv71Ts8slKDv3KsoiL2PlKOiUekPnEqq6AH4jDnYhRlFtCCudfRObBJ5W10OXsDK5YSI_rDNKio4S-zijVZTZTL8AIVjB1QqMBfeyTMGLYvVx7kLjzsuIQPuIF7PxfunRaTttkeD85LZA-KjoVwPKRWE7sShe1kXDAeek6cgfTe2wqluMeUkkH16WjjB9RqJFg3908cDtm7U7bhC35JeXIl8prE4aEb5l_2v9JVNSSG0JIoBloSePOU5P9ek__yrQ4s_ggWWis0ixruppG0MylTJkIcu-HhItW3LIsmKW28qkouIOS4IXx0EfGsBWHp12hVcPYlAZzmrg-jyDjepdG60Pf_b58-Ybai3U6Vh_991s8_X_2tsEUsYaqk4PIeE97emuvCx1NufRP2aj2mkFtAzY-Ipz-F8mkLGsFj1VYPLcr1s-LSAMITCCzmlITyW6uh3HhyDTkcX-xiG-A80Huh_t5P6b9yhcPYdYQTaWAqpIdADge8qIEMeD7-Lo39KZPkbNTCVBgKAGg1fGUAW8apfYDi9_dhdW0mib7MHCmXef0h2jQD5WLPqQFnkg26BLpaPiAJH2Z_-tucIIosVdaSvGO6PAnaygUJmTo8oTbZoWKehF78"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "lala",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lala@lala.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8002/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQyZDg1N2ExZTRkYTJkNWQ1ZjczNWIzODk3NWMwNDk4YjMyZDk1NjdkODAxMTI0YWMxMTNkMzdjMTZjZTQ4MDlhMzM5MWRjY2Q4MjI5OWVmIn0.eyJhdWQiOiIyIiwianRpIjoiNDJkODU3YTFlNGRhMmQ1ZDVmNzM1YjM4OTc1YzA0OThiMzJkOTU2N2Q4MDExMjRhYzExM2QzN2MxNmNlNDgwOWEzMzkxZGNjZDgyMjk5ZWYiLCJpYXQiOjE2MzgyMzM4NDgsIm5iZiI6MTYzODIzMzg0OCwiZXhwIjoxNjY5NzY5ODQ4LCJzdWIiOiIiLCJzY29wZXMiOlsiKiJdfQ.OiLvC9YnNcs6mzoj41Cd94u4U_-NC-igYjMQn_vdLgUI6N51hHLIv5s3Sv71Ts8slKDv3KsoiL2PlKOiUekPnEqq6AH4jDnYhRlFtCCudfRObBJ5W10OXsDK5YSI_rDNKio4S-zijVZTZTL8AIVjB1QqMBfeyTMGLYvVx7kLjzsuIQPuIF7PxfunRaTttkeD85LZA-KjoVwPKRWE7sShe1kXDAeek6cgfTe2wqluMeUkkH16WjjB9RqJFg3908cDtm7U7bhC35JeXIl8prE4aEb5l_2v9JVNSSG0JIoBloSePOU5P9ek__yrQ4s_ggWWis0ixruppG0MylTJkIcu-HhItW3LIsmKW28qkouIOS4IXx0EfGsBWHp12hVcPYlAZzmrg-jyDjepdG60Pf_b58-Ybai3U6Vh_991s8_X_2tsEUsYaqk4PIeE97emuvCx1NufRP2aj2mkFtAzY-Ipz-F8mkLGsFj1VYPLcr1s-LSAMITCCzmlITyW6uh3HhyDTkcX-xiG-A80Huh_t5P6b9yhcPYdYQTaWAqpIdADge8qIEMeD7-Lo39KZPkbNTCVBgKAGg1fGUAW8apfYDi9_dhdW0mib7MHCmXef0h2jQD5WLPqQFnkg26BLpaPiAJH2Z_-tucIIosVdaSvGO6PAnaygUJmTo8oTbZoWKehF78",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8002/users",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Access Token",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "haroldts@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "grLFfwPOFfAX3iuXDpIe2GLGK7KCTlVVqNVQPs9E",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "*",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8002/oauth/token",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "users/me",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImExOGVhNmVlYWEyNjAxYmQyYjNhOWMwNzM4NDI1OWIzODY4NzA1YzkxMTQ0ZWQ1YThlMGE3NjNhNGI5ZWEzNjNkYjY1OGM2NjQ4ZGFiYzJkIn0.eyJhdWQiOiIyIiwianRpIjoiYTE4ZWE2ZWVhYTI2MDFiZDJiM2E5YzA3Mzg0MjU5YjM4Njg3MDVjOTExNDRlZDVhOGUwYTc2M2E0YjllYTM2M2RiNjU4YzY2NDhkYWJjMmQiLCJpYXQiOjE2MzgyMzgxMzksIm5iZiI6MTYzODIzODEzOSwiZXhwIjoxNjY5Nzc0MTM5LCJzdWIiOiI0Iiwic2NvcGVzIjpbIioiXX0.NzRQSHWb2NXxdS5oppoOVHz8N6N5ahCuPaqN_OqPy89qQsQZsLWUAaJC6N8mgBYZIVB_GaE_SfA2mn7mJBJRiLAjfkD1r5U1MjDqJWuL1Sc9uVXnQES2_3g3HsG3tLjdGFuQV_z5DOnsMwmPwWhNZI-sl0VZiVdFV5IJsqRWZmvdVdS5F3ih-FzZL1Rmx54vs7_55RuRhaT9KMLzhY-ovhroGb3OC6zAT3YenVdVzJqyZZGXYmO-w-lxxCdhWwP-lN-pAOcBfRA3ci8yYqUGtGulkd_70P4SwytXVrB98_pMflqPgqVgISCZXB3ueQ_W54bFuHgO_tTPUMqpuWeaRdQHNG9lfSzOPfwbbVUlKbNo2NFf7k3VhD8-hv59hmUNAJmNEpkpeZjJb-9l8ap-41sGHIxHzR2W8RzWiAfiImQIu32I71WrYvg0HTBUaXSHNkhRlPvVg71o-tRhUzYyR0WXwP4NN7v3ZtAAKsGVSswZfNQMwp2KpCJTGDMa3eycipd0N93yFcxUPXLjsi8W7FLmJzES3aoY7xevXFQDWBpv8gGOKtMasuSrBgSedw_9x11ewUBtVSoLyYjO9QAYJUw4HAFU0OwgdFF48NfNGwOcbXEFeyHVHKO8vNX2-Hkehzut_UzkSJDYA0khmRS3Ql8tQtpAZw2rL3x-T3m3EBU"
+									}
+								],
+								"url": {
+									"raw": "localhost:8002/users/me",
+									"host": [
+										"localhost"
+									],
+									"port": "8002",
+									"path": [
+										"users",
+										"me"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get access Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "XSTfn6a3EWeLuLyfKTzOQNfmUnjYPOxCmKYEaGu1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8002/oauth/token",
+							"host": [
+								"localhost"
+							],
+							"port": "8002",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
